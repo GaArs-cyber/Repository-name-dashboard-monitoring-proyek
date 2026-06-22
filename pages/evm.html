@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>EVM</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="logo-box">
+      <img src="../images/logo.svg" alt="Logo">
+      <h2>Smart Campus</h2>
+    </div>
+
+    <nav class="menu">
+      <a class="" href="../index.html">🏠 Home</a>
+<a class="" href="kpi.html">📊 KPI</a>
+<a class="active" href="evm.html">💰 EVM</a>
+<a class="" href="risk.html">⚠️ Risk Status</a>
+<a class="" href="schedule.html">🗓️ Schedule</a>
+<a class="" href="budget.html">💳 Budget</a>
+
+    </nav>
+  </aside>
+
+  <main class="main">
+    
+<div class="header"><h1>Earned Value Management</h1><p>Perhitungan PV, EV, AC, SV, CV, SPI, dan CPI.</p></div>
+<div class="grid">
+  <div class="card">
+    <table>
+      <tr><th>Komponen</th><th>Nilai</th></tr>
+      <tr><td>PV</td><td>Rp 150.000.000</td></tr>
+      <tr><td>EV</td><td>Rp 140.000.000</td></tr>
+      <tr><td>AC</td><td>Rp 160.000.000</td></tr>
+      <tr><td>SV = EV - PV</td><td class="status-red">-Rp 10.000.000</td></tr>
+      <tr><td>CV = EV - AC</td><td class="status-red">-Rp 20.000.000</td></tr>
+      <tr><td>SPI = EV / PV</td><td class="status-yellow">0,93</td></tr>
+      <tr><td>CPI = EV / AC</td><td class="status-red">0,88</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h2>Grafik EVM</h2>
+    <div class="chart-box"><canvas id="evmChart"></canvas></div>
+  </div>
+</div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

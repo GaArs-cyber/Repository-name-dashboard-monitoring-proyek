@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Monitoring Proyek</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="logo-box">
+      <img src="images/logo.svg" alt="Logo">
+      <h2>Smart Campus</h2>
+    </div>
+
+    <nav class="menu">
+      <a class="active" href="index.html">🏠 Home</a>
+<a class="" href="pages/kpi.html">📊 KPI</a>
+<a class="" href="pages/evm.html">💰 EVM</a>
+<a class="" href="pages/risk.html">⚠️ Risk Status</a>
+<a class="" href="pages/schedule.html">🗓️ Schedule</a>
+<a class="" href="pages/budget.html">💳 Budget</a>
+
+    </nav>
+  </aside>
+
+  <main class="main">
+    
+<div class="header">
+  <h1>Dashboard Monitoring Proyek Smart Campus</h1>
+  <p>Sistem terintegrasi kampus cerdas meliputi absensi IoT, portal akademik, dan manajemen fasilitas.</p>
+</div>
+
+<div class="grid">
+  <div class="card">
+    <h2>01. Progress Proyek</h2>
+    <p>Persentase penyelesaian proyek secara keseluruhan.</p>
+    <div class="progress-wrap">
+      <div class="progress-bar">68%</div>
+    </div>
+    <p>Status: <span class="status-yellow">Dalam Proses</span></p>
+  </div>
+
+  <div class="card">
+    <h2>02. KPI Utama</h2>
+    <div class="kpi-row"><span>Integrasi Absensi IoT</span><span class="status-green">85%</span></div>
+    <div class="kpi-row"><span>Portal Akademik</span><span class="status-yellow">70%</span></div>
+    <div class="kpi-row"><span>Manajemen Fasilitas</span><span class="status-red">55%</span></div>
+  </div>
+
+  <div class="card">
+    <h2>03. Progress Gauge</h2>
+    <div class="chart-box"><canvas id="progressChart"></canvas></div>
+  </div>
+
+  <div class="card">
+    <h2>04. Budget Chart</h2>
+    <div class="chart-box"><canvas id="budgetChart"></canvas></div>
+  </div>
+
+  <div class="card full">
+    <h2>Kesimpulan Monitoring</h2>
+    <p>Proyek Smart Campus telah mencapai 68%. Dari sisi jadwal, proyek sedikit terlambat. Dari sisi biaya, proyek berpotensi melebihi anggaran sehingga perlu pengendalian biaya dan percepatan pekerjaan pada modul manajemen fasilitas.</p>
+  </div>
+</div>
+
+<div class="footer-note">✅ Dashboard ini memuat Progress Proyek, KPI, EVM, Risk Status, Schedule Status, dan Budget Status.</div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

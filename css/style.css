@@ -1,0 +1,182 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f6fb;
+  color: #111827;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 245px;
+  height: 100vh;
+  background: #111827;
+  color: white;
+  padding: 20px;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.logo-box img {
+  width: 42px;
+  height: 42px;
+}
+
+.logo-box h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.menu a {
+  display: block;
+  color: #d1d5db;
+  text-decoration: none;
+  padding: 13px 14px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.menu a:hover,
+.menu a.active {
+  background: #2563eb;
+  color: white;
+}
+
+.main {
+  margin-left: 245px;
+  padding: 28px;
+}
+
+.header {
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.header h1 {
+  margin: 0 0 8px 0;
+  font-size: 30px;
+}
+
+.header p {
+  margin: 0;
+  color: #4b5563;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.card.full {
+  grid-column: span 2;
+}
+
+.progress-wrap {
+  background: #e5e7eb;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 18px 0;
+}
+
+.progress-bar {
+  background: #22c55e;
+  color: white;
+  width: 68%;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.kpi-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  background: #f9fafb;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.status-green {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.status-yellow {
+  color: #ca8a04;
+  font-weight: bold;
+}
+
+.status-red {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+th {
+  background: #111827;
+  color: white;
+}
+
+th, td {
+  border: 1px solid #d1d5db;
+  padding: 12px;
+  text-align: center;
+}
+
+.budget-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.budget-item {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+}
+
+.chart-box {
+  height: 320px;
+}
+
+.footer-note {
+  margin-top: 24px;
+  background: #dcfce7;
+  color: #166534;
+  padding: 16px;
+  border-radius: 12px;
+}

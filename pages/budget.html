@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>BUDGET</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="logo-box">
+      <img src="../images/logo.svg" alt="Logo">
+      <h2>Smart Campus</h2>
+    </div>
+
+    <nav class="menu">
+      <a class="" href="../index.html">🏠 Home</a>
+<a class="" href="kpi.html">📊 KPI</a>
+<a class="" href="evm.html">💰 EVM</a>
+<a class="" href="risk.html">⚠️ Risk Status</a>
+<a class="" href="schedule.html">🗓️ Schedule</a>
+<a class="active" href="budget.html">💳 Budget</a>
+
+    </nav>
+  </aside>
+
+  <main class="main">
+    
+<div class="header"><h1>Budget Status</h1><p>Perbandingan anggaran rencana, aktual, dan EAC.</p></div>
+<div class="grid">
+  <div class="card">
+    <div class="budget-box">
+      <div class="budget-item"><h3>Rencana</h3><p>Rp 200.000.000</p></div>
+      <div class="budget-item"><h3>Aktual</h3><p>Rp 160.000.000</p></div>
+      <div class="budget-item"><h3>EAC</h3><p>Rp 228.000.000</p></div>
+    </div>
+    <p>Status: <span class="status-red">Berpotensi melebihi anggaran</span></p>
+  </div>
+  <div class="card">
+    <h2>Grafik Budget</h2>
+    <div class="chart-box"><canvas id="budgetChart"></canvas></div>
+  </div>
+</div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
