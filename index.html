@@ -29,7 +29,7 @@
 
     <div class="header">
       <h1>Dashboard Overview</h1>
-      <p>Ringkasan monitoring proyek Smart Campus berdasarkan progress, KPI, EVM, risiko, jadwal, anggaran, dan task.</p>
+      <p>Ringkasan monitoring proyek Smart Campus berdasarkan progress, EVM, risiko, jadwal, dan anggaran.</p>
     </div>
 
     <div class="grid">
@@ -81,60 +81,26 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card full">
         <h2>07. Progress Gauge</h2>
         <div class="chart-box">
           <canvas id="progressChart"></canvas>
         </div>
       </div>
 
-      <div class="card">
-        <h2>08. KPI Utama</h2>
-        <div class="kpi-row">
-          <span>Integrasi Absensi IoT</span>
-          <span class="status-green">85%</span>
-        </div>
-        <div class="kpi-row">
-          <span>Portal Akademik</span>
-          <span class="status-yellow">70%</span>
-        </div>
-        <div class="kpi-row">
-          <span>Manajemen Fasilitas</span>
-          <span class="status-red">55%</span>
-        </div>
-      </div>
-
-      <div class="card full" id="task-monitoring">
-        <h2>09. Task Monitoring</h2>
-
-        <table class="task-table">
-          <thead>
-            <tr>
-              <th>Task</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          
-        <div class="workflow-box">
-          Workflow:
-          <strong>TO DO → IN PROGRESS → REVIEW → DONE</strong>
-        </div>
-      </div>
-
       <div class="card full">
         <h2>Kesimpulan Monitoring</h2>
         <p>
-          Proyek Smart Campus telah mencapai 68%. KPI utama menunjukkan integrasi absensi IoT berjalan baik,
-          namun portal akademik dan manajemen fasilitas masih perlu ditingkatkan. Dari sisi EVM, nilai SPI dan CPI
-          berada di bawah 1 sehingga proyek memerlukan pengendalian jadwal dan biaya. Risiko utama berada pada
-          keterlambatan integrasi IoT dan kelengkapan data KPI.
+          Proyek Smart Campus telah mencapai 68%. Dari sisi EVM, nilai SPI dan CPI
+          berada di bawah 1 sehingga proyek memerlukan pengendalian jadwal dan biaya.
+          Risiko utama berada pada keterlambatan integrasi IoT dan kelengkapan data KPI.
         </p>
       </div>
 
     </div>
 
     <div class="footer-note">
-      ✅ Dashboard ini memuat Progress Proyek, KPI, EVM, Risk Status, Schedule Status, Budget Status, dan Task Monitoring.
+      ✅ Dashboard ini memuat Progress Proyek, EVM, Risk Status, Schedule Status, dan Budget Status.
     </div>
 
   </main>
