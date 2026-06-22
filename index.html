@@ -9,7 +9,6 @@
 <body>
 
   <aside class="sidebar">
-
     <div class="logo-box">
       <img src="images/logo.svg" alt="Logo">
       <h2>Smart Campus</h2>
@@ -24,86 +23,91 @@
       <a href="pages/budget.html">💳 Budget</a>
       <a href="#task-monitoring">📋 Task Monitoring</a>
     </nav>
-
   </aside>
 
   <main class="main">
 
     <div class="header">
-      <h1>Dashboard Monitoring Proyek Smart Campus</h1>
-      <p>
-        Sistem terintegrasi kampus cerdas meliputi Absensi IoT,
-        Portal Akademik, dan Manajemen Fasilitas.
-      </p>
+      <h1>Dashboard Overview</h1>
+      <p>Ringkasan monitoring proyek Smart Campus berdasarkan progress, KPI, EVM, risiko, jadwal, anggaran, dan task Jira.</p>
     </div>
 
     <div class="grid">
 
-      <!-- Progress Proyek -->
       <div class="card">
-        <h2>01. Progress Proyek</h2>
-
-        <p>Persentase penyelesaian proyek secara keseluruhan.</p>
-
+        <h2>01. Overall Progress</h2>
+        <p>Persentase penyelesaian seluruh proyek.</p>
         <div class="progress-wrap">
-          <div class="progress-bar">
-            68%
-          </div>
+          <div class="progress-bar">68%</div>
         </div>
-
-        <p>
-          Status:
-          <span class="status-yellow">
-            Dalam Proses
-          </span>
-        </p>
+        <p>Status: <span class="status-yellow">Dalam Proses</span></p>
       </div>
 
-      <!-- KPI -->
       <div class="card">
-        <h2>02. KPI Utama</h2>
+        <h2>02. Total Anggaran</h2>
+        <h1>Rp 200.000.000</h1>
+        <p>Total anggaran rencana proyek Smart Campus.</p>
+      </div>
 
+      <div class="card">
+        <h2>03. Schedule Variance</h2>
+        <h1 class="status-red">- Rp 10.000.000</h1>
+        <p>Nilai SV menunjukkan proyek sedikit terlambat dari jadwal.</p>
+      </div>
+
+      <div class="card">
+        <h2>04. Risk Level Utama</h2>
+        <h1 class="status-red">High</h1>
+        <p>Risiko utama terdapat pada keterlambatan integrasi IoT dan kelengkapan data KPI.</p>
+      </div>
+
+      <div class="card">
+        <h2>05. Performance Index</h2>
+        <div class="kpi-row">
+          <span>SPI (Schedule Performance Index)</span>
+          <span class="status-yellow">0.93</span>
+        </div>
+        <div class="kpi-row">
+          <span>CPI (Cost Performance Index)</span>
+          <span class="status-red">0.88</span>
+        </div>
+        <p>Nilai SPI dan CPI di bawah 1 menunjukkan proyek perlu pengendalian jadwal dan biaya.</p>
+      </div>
+
+      <div class="card">
+        <h2>06. Budget Projection</h2>
+        <div class="chart-box">
+          <canvas id="budgetChart"></canvas>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>07. Progress Gauge</h2>
+        <div class="chart-box">
+          <canvas id="progressChart"></canvas>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>08. KPI Utama</h2>
         <div class="kpi-row">
           <span>Integrasi Absensi IoT</span>
           <span class="status-green">85%</span>
         </div>
-
         <div class="kpi-row">
           <span>Portal Akademik</span>
           <span class="status-yellow">70%</span>
         </div>
-
         <div class="kpi-row">
           <span>Manajemen Fasilitas</span>
           <span class="status-red">55%</span>
         </div>
       </div>
 
-      <!-- Progress Gauge -->
-      <div class="card">
-        <h2>03. Progress Gauge</h2>
-
-        <div class="chart-box">
-          <canvas id="progressChart"></canvas>
-        </div>
-      </div>
-
-      <!-- Budget Chart -->
-      <div class="card">
-        <h2>04. Budget Chart</h2>
-
-        <div class="chart-box">
-          <canvas id="budgetChart"></canvas>
-        </div>
-      </div>
-
-      <!-- Task Monitoring -->
       <div class="card full" id="task-monitoring">
-
-        <h2>05. Task Monitoring Jira</h2>
+        <h2>09. Task Monitoring Jira</h2>
 
         <table class="task-table">
-
           <thead>
             <tr>
               <th>Task</th>
@@ -112,117 +116,61 @@
           </thead>
 
           <tbody>
-
             <tr>
               <td>01 - Progress Proyek</td>
-              <td>
-                <span class="status-done">
-                  DONE
-                </span>
-              </td>
+              <td><span class="status-done">DONE</span></td>
             </tr>
-
             <tr>
               <td>02 - KPI Proyek</td>
-              <td>
-                <span class="status-progress">
-                  IN PROGRESS
-                </span>
-              </td>
+              <td><span class="status-progress">IN PROGRESS</span></td>
             </tr>
-
             <tr>
               <td>03 - EVM Project</td>
-              <td>
-                <span class="status-progress">
-                  IN PROGRESS
-                </span>
-              </td>
+              <td><span class="status-progress">IN PROGRESS</span></td>
             </tr>
-
             <tr>
               <td>04 - Risk Status</td>
-              <td>
-                <span class="status-todo">
-                  TO DO
-                </span>
-              </td>
+              <td><span class="status-todo">TO DO</span></td>
             </tr>
-
             <tr>
               <td>05 - Schedule Status</td>
-              <td>
-                <span class="status-review">
-                  REVIEW
-                </span>
-              </td>
+              <td><span class="status-review">REVIEW</span></td>
             </tr>
-
             <tr>
               <td>06 - Budget Status</td>
-              <td>
-                <span class="status-todo">
-                  TO DO
-                </span>
-              </td>
+              <td><span class="status-todo">TO DO</span></td>
             </tr>
-
             <tr>
               <td>07 - Testing Dashboard</td>
-              <td>
-                <span class="status-todo">
-                  TO DO
-                </span>
-              </td>
+              <td><span class="status-todo">TO DO</span></td>
             </tr>
-
             <tr>
               <td>08 - Finalisasi dan Presentasi</td>
-              <td>
-                <span class="status-todo">
-                  TO DO
-                </span>
-              </td>
+              <td><span class="status-todo">TO DO</span></td>
             </tr>
-
           </tbody>
-
         </table>
 
         <div class="workflow-box">
-
           Workflow Jira:
-
-          <strong>
-            TO DO → IN PROGRESS → REVIEW → DONE
-          </strong>
-
+          <strong>TO DO → IN PROGRESS → REVIEW → DONE</strong>
         </div>
-
       </div>
 
-      <!-- Kesimpulan -->
       <div class="card full">
-
         <h2>Kesimpulan Monitoring</h2>
-
         <p>
-          Proyek Smart Campus telah mencapai 68%.
-          KPI utama masih dalam proses pencapaian.
-          Jadwal proyek menunjukkan beberapa aktivitas
-          masih berada pada tahap review dan to do.
-          Pengendalian biaya perlu dilakukan agar
-          pengeluaran tetap sesuai anggaran yang direncanakan.
+          Proyek Smart Campus telah mencapai 68%. KPI utama menunjukkan integrasi absensi IoT berjalan baik,
+          namun portal akademik dan manajemen fasilitas masih perlu ditingkatkan. Dari sisi EVM, nilai SPI dan CPI
+          berada di bawah 1 sehingga proyek memerlukan pengendalian jadwal dan biaya. Risiko utama berada pada
+          keterlambatan integrasi IoT dan kelengkapan data KPI.
         </p>
-
       </div>
 
     </div>
 
     <div class="footer-note">
-      ✅ Dashboard ini memuat Progress Proyek, KPI, EVM,
-      Risk Status, Schedule Status, Budget Status,
-      dan Monitoring Task Jira.
+      ✅ Dashboard ini memuat Progress Proyek, KPI, EVM, Risk Status, Schedule Status, Budget Status, dan Task Monitoring Jira.
     </div>
 
   </main>
