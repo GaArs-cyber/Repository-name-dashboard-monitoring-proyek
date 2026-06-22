@@ -14,27 +14,134 @@
     </div>
 
     <nav class="menu">
-      <a class="" href="../index.html">🏠 Home</a>
-<a class="" href="kpi.html">📊 KPI</a>
-<a class="" href="evm.html">💰 EVM</a>
-<a class="active" href="risk.html">⚠️ Risk Status</a>
-<a class="" href="schedule.html">🗓️ Schedule</a>
-<a class="" href="budget.html">💳 Budget</a>
-
+      <a href="../index.html">🏠 Home</a>
+      <a href="kpi.html">📊 KPI</a>
+      <a href="evm.html">💰 EVM</a>
+      <a class="active" href="risk.html">⚠️ Risk Status</a>
+      <a href="schedule.html">🗓️ Schedule</a>
+      <a href="budget.html">💳 Budget</a>
+      <a href="task.html">📋 Task Monitoring</a>
     </nav>
   </aside>
 
   <main class="main">
-    
-<div class="header"><h1>Risk Status</h1><p>Daftar risiko aktif dan status mitigasi.</p></div>
-<div class="card">
-  <table>
-    <tr><th>Risiko</th><th>Level</th><th>Dampak</th><th>Mitigasi</th></tr>
-    <tr><td>Keterlambatan integrasi IoT</td><td class="status-red">High</td><td>Tinggi</td><td>Menambah teknisi dan evaluasi mingguan</td></tr>
-    <tr><td>Gangguan server akademik</td><td class="status-yellow">Medium</td><td>Sedang</td><td>Backup server dan monitoring uptime</td></tr>
-    <tr><td>Resistensi pengguna</td><td class="status-green">Low</td><td>Rendah</td><td>Sosialisasi dan pelatihan pengguna</td></tr>
-  </table>
-</div>
+
+    <div class="header">
+      <h1>Risk Status</h1>
+      <p>Daftar risiko aktif, skor risiko, status mitigasi, dan interpretasi risiko proyek Smart Campus.</p>
+    </div>
+
+    <div class="grid">
+
+      <div class="card full">
+        <h2>Risk Register</h2>
+
+        <table>
+          <tr>
+            <th>ID</th>
+            <th>Risiko</th>
+            <th>Likelihood</th>
+            <th>Impact</th>
+            <th>Skor</th>
+            <th>Level</th>
+            <th>Mitigasi</th>
+          </tr>
+
+          <tr>
+            <td>R-01</td>
+            <td>Keterlambatan integrasi IoT</td>
+            <td>4</td>
+            <td>4</td>
+            <td>16</td>
+            <td class="status-red">High</td>
+            <td>Menambah teknisi dan evaluasi mingguan.</td>
+          </tr>
+
+          <tr>
+            <td>R-02</td>
+            <td>Gangguan server akademik</td>
+            <td>3</td>
+            <td>3</td>
+            <td>9</td>
+            <td class="status-yellow">Medium</td>
+            <td>Backup server dan monitoring uptime.</td>
+          </tr>
+
+          <tr>
+            <td>R-03</td>
+            <td>Resistensi pengguna</td>
+            <td>2</td>
+            <td>2</td>
+            <td>4</td>
+            <td class="status-green">Low</td>
+            <td>Sosialisasi dan pelatihan pengguna.</td>
+          </tr>
+
+          <tr>
+            <td>R-04</td>
+            <td>Data KPI belum lengkap</td>
+            <td>3</td>
+            <td>4</td>
+            <td>12</td>
+            <td class="status-red">High</td>
+            <td>Validasi data mingguan dan koordinasi dengan admin akademik.</td>
+          </tr>
+
+          <tr>
+            <td>R-05</td>
+            <td>Keterlambatan testing dashboard</td>
+            <td>3</td>
+            <td>3</td>
+            <td>9</td>
+            <td class="status-yellow">Medium</td>
+            <td>Membuat jadwal testing dan checklist pengujian.</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <h2>Risk Level Summary</h2>
+
+        <div class="kpi-row">
+          <span>High Risk</span>
+          <span class="status-red">2 Risiko</span>
+        </div>
+
+        <div class="kpi-row">
+          <span>Medium Risk</span>
+          <span class="status-yellow">2 Risiko</span>
+        </div>
+
+        <div class="kpi-row">
+          <span>Low Risk</span>
+          <span class="status-green">1 Risiko</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Interpretasi Risk Status</h2>
+
+        <p>
+          Risiko dengan level High menunjukkan kondisi yang membutuhkan perhatian segera
+          karena memiliki kemungkinan terjadi dan dampak yang tinggi terhadap proyek.
+          Risiko Medium perlu dipantau secara berkala, sedangkan risiko Low cukup
+          dikendalikan melalui sosialisasi dan dokumentasi.
+        </p>
+      </div>
+
+      <div class="card full">
+        <h2>Kesimpulan Risk Monitoring</h2>
+
+        <p>
+          Berdasarkan hasil monitoring risiko, proyek Smart Campus memiliki dua risiko
+          dengan level High, yaitu keterlambatan integrasi IoT dan data KPI yang belum
+          lengkap. Risiko tersebut perlu menjadi prioritas utama Project Manager melalui
+          evaluasi mingguan, penambahan teknisi, validasi data, serta koordinasi dengan
+          pihak terkait agar proyek tetap berjalan sesuai jadwal dan target.
+        </p>
+      </div>
+
+    </div>
 
   </main>
 
