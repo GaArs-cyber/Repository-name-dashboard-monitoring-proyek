@@ -14,37 +14,108 @@
     </div>
 
     <nav class="menu">
-      <a class="" href="../index.html">🏠 Home</a>
-<a class="" href="kpi.html">📊 KPI</a>
-<a class="active" href="evm.html">💰 EVM</a>
-<a class="" href="risk.html">⚠️ Risk Status</a>
-<a class="" href="schedule.html">🗓️ Schedule</a>
-<a class="" href="budget.html">💳 Budget</a>
-
+      <a href="../index.html">🏠 Home</a>
+      <a href="kpi.html">📊 KPI</a>
+      <a class="active" href="evm.html">💰 EVM</a>
+      <a href="risk.html">⚠️ Risk Status</a>
+      <a href="schedule.html">🗓️ Schedule</a>
+      <a href="budget.html">💳 Budget</a>
+      <a href="task.html">📋 Task Monitoring</a>
     </nav>
   </aside>
 
   <main class="main">
-    
-<div class="header"><h1>Earned Value Management</h1><p>Perhitungan PV, EV, AC, SV, CV, SPI, dan CPI.</p></div>
-<div class="grid">
-  <div class="card">
-    <table>
-      <tr><th>Komponen</th><th>Nilai</th></tr>
-      <tr><td>PV</td><td>Rp 150.000.000</td></tr>
-      <tr><td>EV</td><td>Rp 140.000.000</td></tr>
-      <tr><td>AC</td><td>Rp 160.000.000</td></tr>
-      <tr><td>SV = EV - PV</td><td class="status-red">-Rp 10.000.000</td></tr>
-      <tr><td>CV = EV - AC</td><td class="status-red">-Rp 20.000.000</td></tr>
-      <tr><td>SPI = EV / PV</td><td class="status-yellow">0,93</td></tr>
-      <tr><td>CPI = EV / AC</td><td class="status-red">0,88</td></tr>
-    </table>
-  </div>
-  <div class="card">
-    <h2>Grafik EVM</h2>
-    <div class="chart-box"><canvas id="evmChart"></canvas></div>
-  </div>
-</div>
+
+    <div class="header">
+      <h1>Earned Value Management</h1>
+      <p>Perhitungan PV, EV, AC, SV, CV, SPI, dan CPI beserta interpretasi kondisi proyek.</p>
+    </div>
+
+    <div class="grid">
+
+      <div class="card full">
+        <h2>Ringkasan Nilai EVM</h2>
+
+        <table>
+          <tr>
+            <th>Metrik</th>
+            <th>Nilai</th>
+            <th>Penjelasan</th>
+          </tr>
+
+          <tr>
+            <td>Planned Value (PV)</td>
+            <td>Rp 150.000.000</td>
+            <td>Anggaran yang direncanakan untuk pekerjaan sampai periode saat ini.</td>
+          </tr>
+
+          <tr>
+            <td>Earned Value (EV)</td>
+            <td>Rp 140.000.000</td>
+            <td>Nilai pekerjaan yang benar-benar telah diselesaikan.</td>
+          </tr>
+
+          <tr>
+            <td>Actual Cost (AC)</td>
+            <td>Rp 160.000.000</td>
+            <td>Biaya aktual yang telah dikeluarkan untuk pekerjaan yang selesai.</td>
+          </tr>
+
+          <tr>
+            <td>Schedule Variance (SV = EV - PV)</td>
+            <td class="status-red">-Rp 10.000.000</td>
+            <td>Nilai negatif menunjukkan proyek mengalami keterlambatan dari jadwal.</td>
+          </tr>
+
+          <tr>
+            <td>Cost Variance (CV = EV - AC)</td>
+            <td class="status-red">-Rp 20.000.000</td>
+            <td>Nilai negatif menunjukkan biaya aktual lebih besar daripada nilai pekerjaan.</td>
+          </tr>
+
+          <tr>
+            <td>Schedule Performance Index (SPI = EV / PV)</td>
+            <td class="status-yellow">0,93</td>
+            <td>SPI kurang dari 1 menunjukkan proyek berjalan lebih lambat dari rencana.</td>
+          </tr>
+
+          <tr>
+            <td>Cost Performance Index (CPI = EV / AC)</td>
+            <td class="status-red">0,88</td>
+            <td>CPI kurang dari 1 menunjukkan penggunaan biaya belum efisien.</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <h2>Grafik EVM</h2>
+        <div class="chart-box">
+          <canvas id="evmChart"></canvas>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Interpretasi Kondisi Proyek</h2>
+        <p>
+          Berdasarkan perhitungan EVM, proyek Smart Campus berada dalam kondisi
+          <strong>behind schedule</strong> dan <strong>over budget</strong>.
+          Nilai SPI sebesar 0,93 menunjukkan bahwa penyelesaian pekerjaan lebih lambat
+          dibandingkan rencana. Nilai CPI sebesar 0,88 menunjukkan biaya aktual yang
+          dikeluarkan lebih besar dibandingkan nilai pekerjaan yang diperoleh.
+        </p>
+      </div>
+
+      <div class="card full">
+        <h2>Kesimpulan EVM</h2>
+        <p>
+          Proyek perlu mendapatkan perhatian dari Project Manager, terutama pada aspek
+          pengendalian jadwal dan biaya. Tindakan yang dapat dilakukan adalah mempercepat
+          pekerjaan kritis, mengevaluasi penggunaan anggaran, dan melakukan monitoring
+          berkala terhadap nilai PV, EV, AC, SPI, dan CPI.
+        </p>
+      </div>
+
+    </div>
 
   </main>
 
