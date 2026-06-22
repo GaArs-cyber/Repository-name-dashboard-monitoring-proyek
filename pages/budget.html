@@ -14,33 +14,144 @@
     </div>
 
     <nav class="menu">
-      <a class="" href="../index.html">🏠 Home</a>
-<a class="" href="kpi.html">📊 KPI</a>
-<a class="" href="evm.html">💰 EVM</a>
-<a class="" href="risk.html">⚠️ Risk Status</a>
-<a class="" href="schedule.html">🗓️ Schedule</a>
-<a class="active" href="budget.html">💳 Budget</a>
-
+      <a href="../index.html">🏠 Home</a>
+      <a href="kpi.html">📊 KPI</a>
+      <a href="evm.html">💰 EVM</a>
+      <a href="risk.html">⚠️ Risk Status</a>
+      <a href="schedule.html">🗓️ Schedule</a>
+      <a class="active" href="budget.html">💳 Budget</a>
+      <a href="task.html">📋 Task Monitoring</a>
     </nav>
   </aside>
 
   <main class="main">
-    
-<div class="header"><h1>Budget Status</h1><p>Perbandingan anggaran rencana, aktual, dan EAC.</p></div>
-<div class="grid">
-  <div class="card">
-    <div class="budget-box">
-      <div class="budget-item"><h3>Rencana</h3><p>Rp 200.000.000</p></div>
-      <div class="budget-item"><h3>Aktual</h3><p>Rp 160.000.000</p></div>
-      <div class="budget-item"><h3>EAC</h3><p>Rp 228.000.000</p></div>
+
+    <div class="header">
+      <h1>Budget Status</h1>
+      <p>Perbandingan anggaran rencana, biaya aktual, selisih biaya, dan proyeksi penyelesaian biaya proyek.</p>
     </div>
-    <p>Status: <span class="status-red">Berpotensi melebihi anggaran</span></p>
-  </div>
-  <div class="card">
-    <h2>Grafik Budget</h2>
-    <div class="chart-box"><canvas id="budgetChart"></canvas></div>
-  </div>
-</div>
+
+    <div class="grid">
+
+      <div class="card full">
+        <h2>Ringkasan Budget</h2>
+
+        <div class="budget-box">
+          <div class="budget-item">
+            <h3>Budget Plan</h3>
+            <p>Rp 200.000.000</p>
+          </div>
+
+          <div class="budget-item">
+            <h3>Actual Cost</h3>
+            <p>Rp 160.000.000</p>
+          </div>
+
+          <div class="budget-item">
+            <h3>EAC</h3>
+            <p>Rp 228.000.000</p>
+          </div>
+        </div>
+
+        <p>
+          Status:
+          <span class="status-red">Berpotensi melebihi anggaran</span>
+        </p>
+      </div>
+
+      <div class="card full">
+        <h2>Detail Perhitungan Budget</h2>
+
+        <table>
+          <tr>
+            <th>Komponen</th>
+            <th>Nilai</th>
+            <th>Penjelasan</th>
+          </tr>
+
+          <tr>
+            <td>Budget Plan / BAC</td>
+            <td>Rp 200.000.000</td>
+            <td>Total anggaran awal yang direncanakan untuk menyelesaikan proyek.</td>
+          </tr>
+
+          <tr>
+            <td>Actual Cost (AC)</td>
+            <td>Rp 160.000.000</td>
+            <td>Biaya aktual yang telah digunakan sampai periode monitoring saat ini.</td>
+          </tr>
+
+          <tr>
+            <td>Earned Value (EV)</td>
+            <td>Rp 140.000.000</td>
+            <td>Nilai pekerjaan yang benar-benar telah diselesaikan.</td>
+          </tr>
+
+          <tr>
+            <td>Cost Variance (CV = EV - AC)</td>
+            <td class="status-red">-Rp 20.000.000</td>
+            <td>Nilai negatif menunjukkan biaya aktual lebih besar daripada nilai pekerjaan yang diperoleh.</td>
+          </tr>
+
+          <tr>
+            <td>Cost Performance Index (CPI = EV / AC)</td>
+            <td class="status-red">0,88</td>
+            <td>CPI kurang dari 1 menunjukkan penggunaan anggaran belum efisien.</td>
+          </tr>
+
+          <tr>
+            <td>Estimate at Completion (EAC)</td>
+            <td class="status-red">Rp 228.000.000</td>
+            <td>Proyeksi total biaya akhir proyek berdasarkan performa biaya saat ini.</td>
+          </tr>
+
+          <tr>
+            <td>Variance at Completion (VAC = BAC - EAC)</td>
+            <td class="status-red">-Rp 28.000.000</td>
+            <td>Nilai negatif menunjukkan proyek diproyeksikan melebihi anggaran sebesar Rp 28.000.000.</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <h2>Grafik Budget</h2>
+        <div class="chart-box">
+          <canvas id="budgetChart"></canvas>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Interpretasi Budget</h2>
+
+        <p>
+          Berdasarkan data budget, actual cost proyek telah mencapai
+          Rp 160.000.000, sedangkan earned value baru sebesar
+          Rp 140.000.000. Hal ini menunjukkan bahwa biaya yang
+          dikeluarkan lebih besar dibandingkan nilai pekerjaan yang
+          telah diselesaikan.
+        </p>
+
+        <p>
+          Nilai EAC sebesar Rp 228.000.000 menunjukkan bahwa apabila
+          pola penggunaan biaya saat ini terus berlanjut, maka total
+          biaya akhir proyek akan melebihi anggaran awal.
+        </p>
+      </div>
+
+      <div class="card full">
+        <h2>Kesimpulan Budget Status</h2>
+
+        <p>
+          Proyek Smart Campus berpotensi mengalami pembengkakan biaya
+          sebesar Rp 28.000.000 dibandingkan anggaran awal.
+          Project Manager perlu melakukan pengendalian biaya,
+          mengevaluasi penggunaan anggaran, dan memprioritaskan
+          pekerjaan yang memiliki dampak langsung terhadap penyelesaian
+          proyek agar pemborosan dapat dikurangi.
+        </p>
+      </div>
+
+    </div>
 
   </main>
 
